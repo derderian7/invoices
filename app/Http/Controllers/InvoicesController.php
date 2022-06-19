@@ -153,10 +153,6 @@ class InvoicesController extends Controller
 
         if (!$id_page == 2) {
 
-            if (!empty($Details->invoice_number)) {
-
-                Storage::disk('public_uploads')->deleteDirectory($Details->invoice_number);
-            }
 
             $invoices->forceDelete();
             session()->flash('delete_invoice');

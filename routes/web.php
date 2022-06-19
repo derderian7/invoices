@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Customers_Report;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoiceAchiveController;
 use App\Http\Controllers\Invoices_Report;
 use App\Http\Controllers\InvoicesController;
@@ -19,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('invoices', InvoicesController::class);
 Route::resource('sections', SectionsController::class);
 Route::resource('products', ProductsController::class);
