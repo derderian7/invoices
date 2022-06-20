@@ -126,7 +126,7 @@ sections
                                         {{csrf_field()}}
 
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">section naem</label>
+                                        <label for="exampleInputEmail1">section name</label>
                                         <input type="text" class="form-control" id="section_name" name="section_name"  >
                                     </div>
 
