@@ -9,17 +9,12 @@ use Spatie\Permission\Models\Permission;
 
 class CreateAdminUserSeeder extends Seeder
 {
-        /**
-         * Run the database seeds.
-         *
-         * @return void
-         */
         public function run()
         {
 
                 $user = User::create([
-                        'name' => 'samirgamal',
-                        'email' => 'samir.gamal77@yahoo.com',
+                        'name' => 'george',
+                        'email' => 'georgederderian7@gmail.com',
                         'password' => bcrypt('123456'),
                         'roles_name' => ["owner"],
                         'Status' => 'مفعل',
