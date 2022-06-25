@@ -21,14 +21,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::resource('invoices', InvoicesController::class);
-Route::resource('sections', SectionsController::class);
-Route::resource('products', ProductsController::class);
 Route::get('section/{section_name}', [InvoicesController::class, 'getproducts']);
 Route::get('/Status_show/{id}', [InvoicesController::class, 'show'])->name('Status_show');
 Route::get('/edit_invoice/{id}', [InvoicesController::class, 'edit']);
 Route::post('/Status_Update/{id}', [InvoicesController::class, 'Status_Update'])->name('Status_Update');
-Route::resource('Archive', InvoiceAchiveController::class);
 Route::get('Invoice_Paid', [InvoicesController::class, 'Invoice_Paid']);
 Route::get('/InvoicesDetails/{id}', [InvoicesDetailsController::class, 'edit']);
 Route::post('delete_file', [InvoicesDetailsController::class, 'destroy'])->name('delete_file');
@@ -58,3 +54,8 @@ Route::get('unreadNotifications_count', [InvoicesController::class, 'unreadNotif
 Route::get('unreadNotifications', [InvoicesController::class, 'unreadNotifications'])->name('unreadNotifications');
 
 Route::get('/{page}', 'App\Http\Controllers\AdminController@index');
+
+Route::resource('invoices', InvoicesController::class);
+Route::resource('sections', SectionsController::class);
+Route::resource('products', ProductsController::class);
+Route::resource('Archive', InvoiceAchiveController::class);
